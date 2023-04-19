@@ -110,6 +110,12 @@ class AndroidUiSettings extends PlatformUiSettings {
   /// desired text for Toolbar title
   final String? toolbarTitle;
 
+  /// desired text for cancel Text
+  final String? cancelText;
+
+  /// desired text for confirm Text
+  final String? confirmText;
+
   /// desired color of the Toolbar
   final Color? toolbarColor;
 
@@ -162,6 +168,8 @@ class AndroidUiSettings extends PlatformUiSettings {
 
   AndroidUiSettings({
     this.toolbarTitle,
+    this.cancelText,
+    this.confirmText,
     this.toolbarColor,
     this.statusBarColor,
     this.toolbarWidgetColor,
@@ -183,6 +191,8 @@ class AndroidUiSettings extends PlatformUiSettings {
   @override
   Map<String, dynamic> toMap() => {
         'android.toolbar_title': this.toolbarTitle,
+        'android.cancel_text': this.cancelText,
+        'android.confirm_text': this.confirmText,
         'android.toolbar_color': int32(this.toolbarColor?.value),
         'android.statusbar_color': int32(this.statusBarColor?.value),
         'android.toolbar_widget_color': int32(this.toolbarWidgetColor?.value),

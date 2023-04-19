@@ -156,6 +156,8 @@ public class ImageCropperDelegate implements PluginRegistry.ActivityResultListen
 
     private UCrop.Options setupUiCustomizedOptions(UCrop.Options options, MethodCall call) {
         String title = call.argument("android.toolbar_title");
+        String cancelText = call.argument("android.cancel_text");
+        String confirmText = call.argument("android.confirm_text");
         Integer toolbarColor = call.argument("android.toolbar_color");
         Integer statusBarColor = call.argument("android.statusbar_color");
         Integer toolbarWidgetColor = call.argument("android.toolbar_widget_color");
@@ -174,6 +176,12 @@ public class ImageCropperDelegate implements PluginRegistry.ActivityResultListen
 
         if (title != null) {
             options.setToolbarTitle(title);
+        }
+        if (cancelText != null) {
+            options.setCancelText(cancelText);
+        }
+        if (confirmText != null) {
+            options.setConfirmText(confirmText);
         }
         if (toolbarColor != null) {
             options.setToolbarColor(toolbarColor);
