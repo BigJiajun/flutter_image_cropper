@@ -22,7 +22,9 @@ dependencies:
   flutter:
     sdk: flutter
   image_cropper_platform_interface:
-    git: https://github.com/BigJiajun/flutter_image_cropper.git
+    git:
+      url: git@github.com:BigJiajun/flutter_image_cropper.git
+      ref: master
   image_cropper_for_web: ^1.0.3
 
 dev_dependencies:
